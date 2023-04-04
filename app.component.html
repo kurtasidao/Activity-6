@@ -1,0 +1,57 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" class="navbar-brand">Activity6</a>
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#" (click)="setToggle(1)">New Employee</a></li>
+        <li><a href="#" (click)="setToggle(0)">Employee List</a></li>
+      </ul>      
+    </div>
+  </div>
+</nav>
+</header>
+<main class="flex-shrink-0">
+    <div class="container" *ngIf="toggleList==0">
+      <div class="panel-heading">
+        <h2>Employee List</h2>
+      </div>
+      <div class="panel-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Number</th>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Birthday</th>
+              <th>Gender</th>
+              <th>Picture</th>
+              <th>Is Active</th>
+            </tr>
+          </thead>
+          <tbody>
+           <tr *ngFor="let employee of employees" app-employee-list [element]="employee">
+          </tr>
+          </tbody>        
+        </table>
+      </div>
+    </div>  
+    <div class="container" *ngIf="toggleList==1">
+      <div class="panel-heading">
+        <h2>New Employee</h2>
+      </div>
+      <div class="panel-body">
+        <app-create-employee (employeeAdded)="onEmployeeCreated($event)" ></app-create-employee>
+      </div>
+    </div>
+</main>
+<div class="panel panel-primary">
+<footer class="footer mt-auto py-3 bg-body-tertiary">
+  <div class="container">
+    <span class="text-body-secondary">Place sticky footer content here.</span>
+  </div>
+</footer>

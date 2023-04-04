@@ -1,0 +1,39 @@
+<h3>Update Employee</h3>
+<div style="width: 400px;">
+  <div [hidden]="submitted" style="width: 400px;"></div>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Id</label>
+      <input type="text" class="form-control" id="id" required [(ngModel)]="employee.id" name="id">
+    </div>
+    <div class="form-group">
+      <label for="name">Number</label>
+      <input type="number" class="form-control" id="number" required [(ngModel)]="employee.number" name="number">
+    </div>
+    <div class="form-group">
+      <label for="name">First Name</label>
+      <input type="text" class="form-control" id="firstName" required [(ngModel)]="employee.firstName" name="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Last Name</label>
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="employee.lastName" name="lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Birthday</label>
+      <input type="date" class="form-control" id="birthday" required [(ngModel)]="employee.birthday" name="birthday">
+    </div>
+    <div class="form-group">
+      <label for="name">Gender</label>
+      <input type="text" class="form-control" id="gender" required [(ngModel)]="employee.Gender" name="gender">
+    </div>
+    <div class="form-group">
+      <label for="name">Picture
+      </label>
+      <input type="url" class="form-control" id="Picture" required [(ngModel)]="employee.Picture" name="Picture">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

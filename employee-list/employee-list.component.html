@@ -1,0 +1,19 @@
+<td>{{element.id}}</td>
+<td>{{element.number}}</td>
+<td>{{element.firstName}}</td>
+<td>{{element.lastName}}</td>
+<td>{{element.birthday | date}}</td>
+<td>{{element.Gender}}</td>
+<td>
+<span class="pull-right">
+<img src={{element.Picture}} class="img-responsive" style="max-height: 50px;" />
+</span>
+</td>
+<td>{{element.Active}}</td>
+<td>
+<button (click)="deleteEmployee(element.id)" class="btn btn-primary">Edit</button>
+<button (click)="deleteEmployee(element.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+<button (click)="employeeDetails(element.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+</td>
+          
+

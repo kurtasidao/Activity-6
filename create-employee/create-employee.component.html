@@ -1,0 +1,35 @@
+<div style="width: 400px;">
+  <form >
+    <div class="form-group">
+      <label for="id">Id</label>
+      <input type="text" class="form-control" id="id" required name="id" [(ngModel)]="employee.id">
+    </div>
+    <div class="form-group">
+      <label for="number">Number</label>
+      <input type="text" class="form-control" id="number" required name="number" [(ngModel)]="employee.number">
+    </div>
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" class="form-control" id="firstName" required  name="firstName" [(ngModel)]="employee.firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" class="form-control" id="lastName" required name="lastName" [(ngModel)]="employee.lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="birthday">Birthday</label>
+      <input type="date" class="form-control" id="birthday" required  name="birthday" [(ngModel)]="employee.birthday">
+    </div>
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <input type="text" class="form-control" id="gender" required  name="gender" [(ngModel)]="employee.Gender">
+    </div>
+    <div class="form-group">
+      <label for="Picture">Picture </label>
+      <input type="url" class="form-control" id="Picture" required  name="Picture" [(ngModel)]="employee.Picture">
+    </div>
+    <button class="btn btn-success" (click)="onEmployeeAdded()">Submit</button>
+  </form>
+</div>
